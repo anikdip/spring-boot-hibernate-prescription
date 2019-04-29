@@ -55,13 +55,6 @@ CREATE TABLE `prescription` (
                               `next_visit_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `prescription`
---
-
-INSERT INTO `prescription` (`id`, `date`, `name`, `age`, `gender`, `diagnosis`, `medicines`, `next_visit_date`) VALUES
-(8, '2019-04-29', 'Anik Mahamood', 30, 'Male', 'Test', 'test', '2019-05-01'),
-(9, '2019-04-30', 'Anik Dip', 25, 'Male', 'Test', 'Test', '2019-05-03');
 
 -- --------------------------------------------------------
 
@@ -105,8 +98,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `first_name`, `last_name`, `password`) VALUES
-(1, 'anik.dip@gmail.com', 'Anik', 'Mahamood', '$2a$10$R0V3Vu80CvFJRljR4tSGW.rKVBkwzj.4ee3fRPBXEcsoTZq21qybW'),
-(3, 'dipa@gmail.com', 'Anik', 'Mahamood', '$2a$10$cczW.2Nkg41rTEMXWhDFEOUr.yN1wkqjSH/gBJB7UDnKuaMA64UuW');
+(1, 'admin@gmail.com', 'Admin', 'Admin', '$2a$10$R0V3Vu80CvFJRljR4tSGW.rKVBkwzj.4ee3fRPBXEcsoTZq21qybW');
 
 -- --------------------------------------------------------
 
@@ -126,7 +118,6 @@ CREATE TABLE `users_roles` (
 
 INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES
 (1, 2),
-(3, 10);
 
 --
 -- Indexes for dumped tables
